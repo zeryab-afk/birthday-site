@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Wish for My Love</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="particles-js"></div>
+    <div class="floating-hearts" id="floatingHearts"></div>
+    <div class="petals" id="petalsContainer"></div>
+    
+    <div class="container">
+        <div class="progress-bar">
+            <div class="progress" id="progressBar"></div>
+        </div>
+
+        <!-- Step 1 -->
+        <div class="step" id="step1">
+            <h1>Happy Birthday,</h1>
+            <p>I've created something magical just for you.</p>
+            <p>Are you ready to begin this special journey?</p>
+            <img src="https://png.pngtree.com/png-vector/20250422/ourmid/pngtree-cute-girl-holding-birthday-cake-smiling-cheerfully-png-image_16067658.png" style="height:200px;width:200px;">
+            <button class="btn" onclick="nextStep()">Open Your Gift</button>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="step" id="step2">
+            <h2>Let's Make This Personal</h2>
+            <p>What's the name of the most beautiful birthday girl in the world?</p>
+            <input type="text" id="nameInput" class="name-input" placeholder="Enter your name">
+            <button class="btn" onclick="saveName()">Continue</button>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="step" id="step3">
+            <h2>For You, <span id="displayName">My Love</span></h2>
+            <p>Click on the heart to feel my love for you!</p>
+            <div class="heart" id="interactiveHeart" onclick="createHearts()"></div>
+            <div id="heartMessage" class="message-box">
+                <p>Every beat of my heart whispers your name, <span id="heartName">my love</span>.</p>
+            </div>
+            <button class="btn" onclick="nextStep()">Continue to Your Message</button>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="step" id="step4">
+            <h2>My Special Message For You</h2>
+            <div class="photo-frame">
+                <img src="https://medias.artmajeur.com/standard/17262319_a-cutel-european-girl-full-bodycartoon-style-illustration-drawn-with-posca-markers-pretty-face-586679414-1.jpg?v=1738402496">
+            </div>
+
+            <div id="typedMessage" class="message-box">
+                <p class="typing-effect" id="typingText"></p>
+            </div>
+
+            <button class="btn" onclick="nextStep()">See Your Surprise</button>
+        </div>
+
+        <!-- Step 5 — FINAL WISH -->
+        <div class="step" id="step5">
+            <h1>🎉 Happy Birthday, <span id="finalName">My Love 💖</span>! 🎂</h1>
+
+            <p>✨ May your day be filled with endless joy, sweet laughter, and all the love your heart can hold ✨</p>
+            <p>🌟 You make every day brighter just by being yourself — like sunshine on a cloudy day. 🌌</p>
+            <p>⏳ Counting every moment until I can hold you and celebrate this magical day together! 🥰</p>
+            <p>💌 With all my love, forever and always... 💫</p>
+
+            <div class="signature">Yours truly, </div>
+
+            <div class="social-share">
+                <div class="social-icon" onclick="shareOnSocial('facebook')"><i class="fab fa-facebook-f"></i></div>
+                <div class="social-icon" onclick="shareOnSocial('twitter')"><i class="fab fa-twitter"></i></div>
+                <div class="social-icon" onclick="shareOnSocial('whatsapp')"><i class="fab fa-whatsapp"></i></div>
+            </div>
+        </div>
+    </div>
+
+<script src="script.js"></script>
+</body>
+</html>
